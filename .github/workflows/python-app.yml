@@ -28,5 +28,6 @@ jobs:
     - name: Lint with flake8
       run: |
         sudo pip install yt-dlp
-        yt-dlp -o "%(playlist)s/%(title)s.%(ext)s" https://youtube.com/playlist?list=PLZnYpvAgGYoP3wUKJ_U3e-uv8n_mvv1Nf
+        yt-dlp -x --audio-format mp3 -o "mp3/%(title)s.%(ext)s" https://youtube.com/playlist?list=PLZnYpvAgGYoP3wUKJ_U3e-uv8n_mvv1Nf
+
 
