@@ -27,5 +27,6 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Lint with flake8
       run: |
-        sudo -H pip install --upgrade youtube-dl
-        youtube-dl https://youtube.com/playlist?list=PLZnYpvAgGYoP3wUKJ_U3e-uv8n_mvv1Nf
+        sudo pip install yt-dlp
+        yt-dlp -o "%(playlist)s/%(title)s.%(ext)s" https://youtube.com/playlist?list=PLZnYpvAgGYoP3wUKJ_U3e-uv8n_mvv1Nf
+
