@@ -30,4 +30,14 @@ jobs:
         sudo pip install yt-dlp
         yt-dlp -x --audio-format mp3 -o "mp3/%(title)s.%(ext)s" https://youtube.com/playlist?list=PLZnYpvAgGYoP3wUKJ_U3e-uv8n_mvv1Nf
 
-
+    - name: Commits
+      run: |
+        git config --local user.email "ika7204@naver.com"
+        git config --local user.name "ika9810"
+        git add .
+        git commit -m "⚙️[GENERATE]Generate Daily HoneyJeans"
+    - name: Push
+      uses: ad-m/github-push-action@master
+      with:
+         branch: 'main'
+         github_token: $
