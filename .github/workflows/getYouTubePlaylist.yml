@@ -1,4 +1,4 @@
-name: Python application
+name: getYouTubePlaylist
 
 on:
   push:
@@ -25,16 +25,16 @@ jobs:
         pip install flake8 pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
         pip install yt-dlp
-    - name: Lint with flake8
+    - name: getYouTubePlaylist
       run: |
-        yt-dlp -x --audio-format mp3 -o "mp3/%(title)s.%(ext)s" https://youtube.com/playlist?list=PLZnYpvAgGYoP3wUKJ_U3e-uv8n_mvv1Nf
+        yt-dlp -x --audio-format mp3 -o "mp3/%(title)s.%(ext)s" https://youtube.com/playlist?list=PLZnYpvAgGYoNKL2KQQfbR3BM8WeVq2LfD&si=uA64cZqqbrNx2ZQD
 
     - name: Commits
       run: |
         git config --local user.email "ika7204@naver.com"
         git config --local user.name "ika9810"
         git add .
-        git commit -m "⚙️[GENERATE]Generate Daily HoneyJeans"
+        git commit -m "⚙️🎶[DOWNLOAD] Download YouTubePlaylist to mp3"
     - name: Push
       uses: ad-m/github-push-action@master
       with:
