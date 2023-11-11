@@ -28,3 +28,4 @@ jobs:
     - name: Lint with flake8
       run: |
         sudo -H pip install --upgrade youtube-dl
+        youtube-dl https://youtube.com/playlist?list=PLZnYpvAgGYoP3wUKJ_U3e-uv8n_mvv1Nf
