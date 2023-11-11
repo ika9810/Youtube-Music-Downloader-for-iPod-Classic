@@ -27,7 +27,7 @@ jobs:
         pip install yt-dlp
     - name: getYouTubePlaylist
       run: |
-        yt-dlp -x --audio-format mp3 -o "mp3/%(title)s.%(ext)s" https://youtube.com/playlist?list=PLZnYpvAgGYoNKL2KQQfbR3BM8WeVq2LfD&si=uA64cZqqbrNx2ZQD
+        yt-dlp -x --audio-format mp3 -o "mp3/%(title)s.%(ext)s" https://youtube.com/playlist?list=PLZnYpvAgGYoNKL2KQQfbR3BM8WeVq2LfD
 
     - name: Commits
       run: |
